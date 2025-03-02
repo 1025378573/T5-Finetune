@@ -25,6 +25,20 @@ The dataset is in JSON format, with each line representing a data sample:
 - **question**: The question to be answered.
 - **answer**: The correct answer to the question.
 
+### Preprocessing Steps
+
+1. **Concatenate Input**:
+   - Format the input as: `"Question: " + question + " Context: " + context`
+   - Example input: `"Question: When does Taobao clear points? Context: Violations are categorized into general violations, serious violations, and selling counterfeit goods. Taobao clears eligible points at 24:00 on December 31 each year."`
+
+2. **Process Answer**:
+   - Ensure the answer ends with `</s>`.
+   - Example answer: `"December 31 at 24:00 </s>"`
+
+3. **Tokenization**:
+   - Use the T5 tokenizer to encode the input and answer.
+   - Replace padding tokens in the answer with `-100` to ignore these positions during loss computation.
+
 ## Evaluation Metrics
 
 The model's performance is evaluated using BLEU scores:

@@ -83,15 +83,8 @@ The script outputs the reference and generated answers.
 ### Visualization
 
 After training, `h1.py` generates a convergence curve `convergence_curve.png`, showing the training loss and validation BLEU scores.
-
+![My Image](./convergence_curve.png)
 ## Logging
 
 Detailed information about the training process is recorded in `train.log`, including batch losses and average losses per epoch.
 
-## Contribution
-
-Feel free to submit issues and contribute to the code.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
